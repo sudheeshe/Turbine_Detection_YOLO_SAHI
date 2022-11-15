@@ -22,6 +22,26 @@
 - Pixel size of wind turbines are very small when comparing the size image.
 - Limited resource.
 
+## Approach
+- To address the small object detection difficulty, Fatih Akyon et al. presented `Slicing Aided Hyper Inference (SAHI)`, an open-source solution that provides a generic slicing aided inference and fine-tuning process for small object recognition. 
+- During the fine-tuning and inference stages, a slicing-based architecture is used.
+
+## What is Slicing Aided Hyper Inference (SAHI)
+- This method works by Splitting the input photos into overlapping slices results in smaller pixel regions when compared to the images fed into the network. 
+- The proposed technique is generic in that it can be used on any existing object detector without needing to be fine-tuned. 
+- The suggested strategy was tested using the models `Detectron2, MMDetection, and YOLOv5`.
+
+![alt text](https://github.com/sudheeshe/Turbine_Detection_YOLO_SAHI/blob/main/readme_imgs/5.gif?raw=true)
+
+- Each image is sliced into overlapping patches of varying dimensions that are chosen within predefined ranges known as hyper-parameters. 
+- Then, during fine-tuning, patches are resized while maintaining the aspect ratio, so that the image width is between 800 and 1333 pixels, resulting in augmentation images with larger relative object sizes than the original image. 
+- These images, along with the original images, are utilized during fine-tuning.
+- During the inference step, the slicing method is also used. 
+- In this case, the original query image is cut into a number of overlapping patches. 
+- The patches are then resized while the aspect ratio is kept. 
+- Following that, each overlapping patch receives its own object detection forward pass. 
+- To detect larger objects, an optional full-inference (FI) using the original image can be used. 
+- Finally, the overlapping prediction results and, if applicable, the FI results are merged back into their original size.
 
 ## Data Understanding
 
