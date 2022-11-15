@@ -1,47 +1,47 @@
 
-# Printed Circuit Board Defect Detection
+# Aerial Wind Turbine Detection - YOLOV5 with Slicing Aided Hyper Inference (SAHI)
 
-![alt text](https://github.com/sudheeshe/PCB_Defect_Detection_Training/blob/main/imgs_readme/3.jpg?raw=true)
+![alt text](https://github.com/sudheeshe/Turbine_Detection_YOLO_SAHI/blob/main/readme_imgs/1.jpg?raw=true)
 
-### What is PCB ...??
+### Why Oject Detection is difficult in small objects ...??
 
-- `Printed circuit boards (PCBs)` are the foundational building block of most modern electronic devices.  
-- Whether simple single layered boards used in your garage door opener, to the six layer board in your smart watch, to a 60 layer, very high density and high-speed circuit boards used in super computers and servers, printed circuit boards are the foundation on which all of the other electronic components are assembled onto.
+- These datasets generally consist of low-resolution photos (640 480 pixels) with huge objects and high pixel coverage (on average, 60 percent of the image height). 
+- While the trained models perform well on those sorts of input data, they exhibit much poorer accuracy on small item detection tasks in high-resolution photos captured by high-end drones and surveillance cameras.
+- Small object detection is thus a difficult task in computer vision because, in addition to the small representations of objects, the diversity of input images makes the task more difficult. 
+- For example, an image can have different resolutions; if the resolution is low, the detector may have difficulty detecting small objects.
 
-![alt text](https://github.com/sudheeshe/PCB_Defect_Detection_Training/blob/main/imgs_readme/1.jpg?raw=true)
 
 - Compared to traditional wired circuits, PCBs offer a number of advantages. Their small and lightweight design is appropriate for use in many modern devices, while their reliability and ease of maintenance suit them for integration in complex systems. 
 - Additionally, their low cost of production makes them a highly cost-effective option.
 
 ## Business Scenario
 
-- The Client is looking for an Effective PCB defects detection System which detect the following defects.
+- The Client is looking for an Effective Wind Turbine detection System on aerial images taken from drones.
 
-        1. missing_hole
-        2. mouse_bite
-        3. open_circuit
-        4. short
-        5. spur
-        6. spurious_copper
+## Challenges
+- Pixel size of wind turbines are very small when comparing the size image.
+- Limited resource.
 
 
 ## Data Understanding
 
-- The available dataset have total 485 images for Training.
-- 139 images for Validation and 69 images are provided for testing
-- On an average 90 images per 6 defect class.
+- The available dataset have total 1266 images for Training.
+- 139 images for Validation and 319 images are provided for validation and testing
+- I have used Imgae augmantation techique using roboflow and created 4261 images for training by applying below augmentations
+
+![alt text](https://github.com/sudheeshe/Turbine_Detection_YOLO_SAHI/blob/main/readme_imgs/2.jpg?raw=true)
 
 
 Let's see some sample from training data
 
-![alt text](https://github.com/sudheeshe/PCB_Defect_Detection_Training/blob/main/imgs_readme/4.jpg?raw=true)
+![alt text](https://github.com/sudheeshe/Turbine_Detection_YOLO_SAHI/blob/main/readme_imgs/3.jpg?raw=true)
 
 
 ## Data Labeling
 
 - Labeling was done with `LabelImg` tool and labels are saved on `.txt` format
 
-![alt text](https://github.com/sudheeshe/PCB_Defect_Detection_Training/blob/main/imgs_readme/5.jpg?raw=true)
+![alt text](https://github.com/sudheeshe/Turbine_Detection_YOLO_SAHI/blob/main/readme_imgs/4.jpg?raw=true)
 
 
 ## Model Building and Evaluation
