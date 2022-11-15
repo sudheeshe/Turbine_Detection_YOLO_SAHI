@@ -96,44 +96,48 @@ Let's visualize some of our `training image batch` and `validation image batch`
 
 - YOLO Small 
 
-![alt text](https://github.com/sudheeshe/Turbine_Detection_YOLO_SAHI/blob/main/readme_imgs/9.jpg?raw=true)
+![alt text](https://github.com/sudheeshe/Turbine_Detection_YOLO_SAHI/blob/main/readme_imgs/9.png?raw=true)
 
 - YOLOX 
 
-![alt text](https://github.com/sudheeshe/Turbine_Detection_YOLO_SAHI/blob/main/readme_imgs/12.jpg?raw=true)
+![alt text](https://github.com/sudheeshe/Turbine_Detection_YOLO_SAHI/blob/main/readme_imgs/12.png?raw=true)
 
 #### F1 Curve
 
 - YOLO Small 
 - 
-![alt text](https://github.com/sudheeshe/Turbine_Detection_YOLO_SAHI/blob/main/readme_imgs/10.jpg?raw=true)
+![alt text](https://github.com/sudheeshe/Turbine_Detection_YOLO_SAHI/blob/main/readme_imgs/10.png?raw=true)
 
 - YOLOX
 
-![alt text](https://github.com/sudheeshe/Turbine_Detection_YOLO_SAHI/blob/main/readme_imgs/13.jpg?raw=true)
+![alt text](https://github.com/sudheeshe/Turbine_Detection_YOLO_SAHI/blob/main/readme_imgs/13.png?raw=true)
 
 - The F1 curve shows that any threshold (confidence) value between 0.2 to almost 0.6 gives better results from the model
 
 #### Confusion Matrix
 - YOLO Small 
 
-![alt text](https://github.com/sudheeshe/Turbine_Detection_YOLO_SAHI/blob/main/readme_imgs/11.jpg?raw=true)
+![alt text](https://github.com/sudheeshe/Turbine_Detection_YOLO_SAHI/blob/main/readme_imgs/11.png?raw=true)
 
 - YOLOX
 
-![alt text](https://github.com/sudheeshe/Turbine_Detection_YOLO_SAHI/blob/main/readme_imgs/14.jpg?raw=true)
+![alt text](https://github.com/sudheeshe/Turbine_Detection_YOLO_SAHI/blob/main/readme_imgs/14.png?raw=true)
 
-- The model has less prediction power on `spurious_copper` class and very high confidence on `missing_hole` and other classes have decent prediction capability.
 
 ## Prediction Images
 
-- In order to do prediction on new images please find my another repository
-
-[Github link](https://github.com/sudheeshe/PCB_Defect_Detection)
-
 - The UI is used for individual predictions by uploading the image
 
-![alt text](https://github.com/sudheeshe/PCB_Defect_Detection_Training/blob/main/imgs_readme/UI.jpg?raw=true)
+![alt text](https://github.com/sudheeshe/Turbine_Detection_YOLO_SAHI/blob/main/readme_imgs/15.jpg?raw=true)
+
+- The UI consist of drop down option for selecting different models 
+
+![alt text](https://github.com/sudheeshe/Turbine_Detection_YOLO_SAHI/blob/main/readme_imgs/16.jpg?raw=true)
+
+- For applying SAHI with different slice sizes on Yolo Small and YoloX we can use this option
+
+![alt text](https://github.com/sudheeshe/Turbine_Detection_YOLO_SAHI/blob/main/readme_imgs/17.jpg?raw=true)
+
 
 - Let's see some prediction done by the model through UI
 
