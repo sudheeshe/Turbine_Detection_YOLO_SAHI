@@ -43,6 +43,10 @@
 - To detect larger objects, an optional full-inference (FI) using the original image can be used. 
 - Finally, the overlapping prediction results and, if applicable, the FI results are merged back into their original size.
 
+![alt text](https://github.com/sudheeshe/Turbine_Detection_YOLO_SAHI/blob/main/readme_imgs/6.gif?raw=true)
+
+
+
 ## Data Understanding
 
 - The available dataset have total 1266 images for Training.
@@ -66,8 +70,9 @@ Let's see some sample from training data
 
 ## Model Building and Evaluation
 
-- Used YoloV5 model for detection.
-- YoloV5 trained from scratch to 1500 epochs on Paperspace P4000 GPU.
+- Used Yolo-Small-V5 model and YoloX-V5 for detection to understand the performance on lite model(Yolo small) and heavy model(YoloX).
+- Yolo-Small-V5 model trained from scratch to 700 epochs on Google Colab.
+- YoloX-V5 model trained from scratch to 1100 epochs on Google Colab.
 - YoloV5 does image augmentation internally on training images which helps in better predictions and reduce overfitting.
 
 ![alt text](https://github.com/sudheeshe/PCB_Defect_Detection_Training/blob/main/imgs_readme/6.jpg?raw=true)
@@ -76,34 +81,47 @@ Let's visualize some of our `training image batch` and `validation image batch`
 
 #### Training image batch with Mosaic augmentation applied
 
-![alt text](https://github.com/sudheeshe/PCB_Defect_Detection_Training/blob/main/imgs_readme/train_tile_batch.jpg?raw=true)
-
+![alt text](https://github.com/sudheeshe/Turbine_Detection_YOLO_SAHI/blob/main/readme_imgs/7.jpg?raw=true)
 #### Validation image batch
 
-![alt text](https://github.com/sudheeshe/PCB_Defect_Detection_Training/blob/main/imgs_readme/val_tile_batch.jpg?raw=true)
+![alt text](https://github.com/sudheeshe/Turbine_Detection_YOLO_SAHI/blob/main/readme_imgs/8.jpg?raw=true)
 
 
-- Let's see the `mAP` for first `100 epochs`. The mAP was `0.0086`
-
-![alt text](https://github.com/sudheeshe/PCB_Defect_Detection_Training/blob/main/Reports/100_epoch_eport.png?raw=true)
-
-
-- The mAP for `1500 epochs` reached to `0.811` at mAP@0.5 (means mAP at threshold of 0.5). 
-- I've tried to run the model for another 200 epochs but the model didn't show any improvement in mAP beyond 1500 epochs.
+- The mAP for Yolo-Small-V5 model on `700 epochs` reached to `0.89` at mAP@0.5 (means mAP at threshold of 0.5). 
+- I've tried to run the model for another 100 epochs but the model didn't show any improvement in mAP beyond 700 epochs.
+- The mAP for YoloX-V5 model on `1100 epochs` reached to `0.91` at mAP@0.5 (means mAP at threshold of 0.5). 
+- I've tried to run the model for another 50 epochs but the model didn't show any improvement in mAP beyond 1100 epochs.
 
 #### Precision-Recall Curve
 
-![alt text](https://github.com/sudheeshe/PCB_Defect_Detection_Training/blob/main/YoloV5_Training/yolov5/runs/train/yolov5s_results8/PR_curve.png?raw=true)
+- YOLO Small 
+
+![alt text](https://github.com/sudheeshe/Turbine_Detection_YOLO_SAHI/blob/main/readme_imgs/9.jpg?raw=true)
+
+- YOLOX 
+
+![alt text](https://github.com/sudheeshe/Turbine_Detection_YOLO_SAHI/blob/main/readme_imgs/12.jpg?raw=true)
 
 #### F1 Curve
 
-![alt text](https://github.com/sudheeshe/PCB_Defect_Detection_Training/blob/main/YoloV5_Training/yolov5/runs/train/yolov5s_results8/F1_curve.png?raw=true)
+- YOLO Small 
+- 
+![alt text](https://github.com/sudheeshe/Turbine_Detection_YOLO_SAHI/blob/main/readme_imgs/10.jpg?raw=true)
+
+- YOLOX
+
+![alt text](https://github.com/sudheeshe/Turbine_Detection_YOLO_SAHI/blob/main/readme_imgs/13.jpg?raw=true)
 
 - The F1 curve shows that any threshold (confidence) value between 0.2 to almost 0.6 gives better results from the model
 
 #### Confusion Matrix
+- YOLO Small 
 
-![alt text](https://github.com/sudheeshe/PCB_Defect_Detection_Training/blob/main/YoloV5_Training/yolov5/runs/train/yolov5s_results8/confusion_matrix.png?raw=true)
+![alt text](https://github.com/sudheeshe/Turbine_Detection_YOLO_SAHI/blob/main/readme_imgs/11.jpg?raw=true)
+
+- YOLOX
+
+![alt text](https://github.com/sudheeshe/Turbine_Detection_YOLO_SAHI/blob/main/readme_imgs/14.jpg?raw=true)
 
 - The model has less prediction power on `spurious_copper` class and very high confidence on `missing_hole` and other classes have decent prediction capability.
 
