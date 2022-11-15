@@ -7,7 +7,7 @@
 
 - Normally datasets which generally consist of low-resolution photos (640 x 480 pixels) with huge objects and high pixel coverage (on average, 60 percent of the image height). 
 
-- ![alt text](https://github.com/sudheeshe/Turbine_Detection_YOLO_SAHI/blob/main/readme_imgs/19.jpg?raw=true)
+![alt text](https://github.com/sudheeshe/Turbine_Detection_YOLO_SAHI/blob/main/readme_imgs/19.jpg?raw=true)
 
 - While the trained models perform well on those sorts of input data, they exhibit much poorer accuracy on small item detection tasks in high-resolution photos captured by high-end drones and surveillance cameras.
 - Small object detection is thus a difficult task in computer vision because, in addition to the small representations of objects, the diversity of input images makes the task more difficult. 
@@ -22,17 +22,19 @@
 - The Client is looking for an Effective Wind Turbine detection System on aerial images taken from drones.
 
 ## Challenges
-- Pixel size of wind turbines are very small when comparing the size image.
-- Limited resource.
+- Pixel size of wind turbines are very small when comparing the size image. We will see training images sample later on this repo.
+- Limited resource
+- Amount data is small (1266 images for training)
+
 
 ## Approach
-- To address the small object detection difficulty, Fatih Akyon et al. presented `Slicing Aided Hyper Inference (SAHI)`, an open-source solution that provides a generic slicing aided inference and fine-tuning process for small object recognition. 
+- To address the small object detection difficulty, `Fatih Akyon et al.` presented `Slicing Aided Hyper Inference (SAHI)`, an open-source solution that provides a generic slicing aided inference and fine-tuning process for small object recognition problems. 
 - During the fine-tuning and inference stages, a slicing-based architecture is used.
 
 ## What is Slicing Aided Hyper Inference (SAHI)
 - This method works by Splitting the input photos into overlapping slices results in smaller pixel regions when compared to the images fed into the network. 
 - The proposed technique is generic in that it can be used on any existing object detector without needing to be fine-tuned. 
-- The suggested strategy was tested using the models `Detectron2, MMDetection, and YOLOv5`.
+- This strategy is currently available and tested for these models `Detectron2, MMDetection, and YOLOv5`.
 
 ![alt text](https://github.com/sudheeshe/Turbine_Detection_YOLO_SAHI/blob/main/readme_imgs/5.gif?raw=true)
 
@@ -53,8 +55,8 @@
 ## Data Understanding
 
 - The available dataset have total 1266 images for Training.
-- 139 images for Validation and 319 images are provided for validation and testing
-- I have used Imgae augmantation techique using roboflow and created 4261 images for training by applying below augmentations
+- 319 images are provided for validation and testing.
+- I have used Image augmentation technique using roboflow and created 4261 images for training, by applying below augmentations
 
 ![alt text](https://github.com/sudheeshe/Turbine_Detection_YOLO_SAHI/blob/main/readme_imgs/2.jpg?raw=true)
 
@@ -90,9 +92,9 @@ Let's visualize some of our `training image batch` and `validation image batch`
 ![alt text](https://github.com/sudheeshe/Turbine_Detection_YOLO_SAHI/blob/main/readme_imgs/8.jpg?raw=true)
 
 
-- The mAP for Yolo-Small-V5 model on `700 epochs` reached to `0.89` at mAP@0.5 (means mAP at threshold of 0.5). 
+- The mAP for Yolo-Small-V5 model on `700 epochs` reached to `mAP 0.89` at `threshold 0.567`. 
 - I've tried to run the model for another 100 epochs but the model didn't show any improvement in mAP beyond 700 epochs.
-- The mAP for YoloX-V5 model on `1100 epochs` reached to `0.91` at mAP@0.5 (means mAP at threshold of 0.5). 
+- The mAP for YoloX-V5 model on `1100 epochs` reached to `0.91` at `threshold 0.417`. 
 - I've tried to run the model for another 50 epochs but the model didn't show any improvement in mAP beyond 1100 epochs.
 
 #### Precision-Recall Curve
@@ -111,11 +113,13 @@ Let's visualize some of our `training image batch` and `validation image batch`
 - 
 ![alt text](https://github.com/sudheeshe/Turbine_Detection_YOLO_SAHI/blob/main/readme_imgs/10.png?raw=true)
 
+- The F1 curve shows that any threshold (confidence) value between 0.45 to almost 0.7 gives better results from the model
+
 - YOLOX
 
 ![alt text](https://github.com/sudheeshe/Turbine_Detection_YOLO_SAHI/blob/main/readme_imgs/13.png?raw=true)
 
-- The F1 curve shows that any threshold (confidence) value between 0.2 to almost 0.6 gives better results from the model
+- The F1 curve shows that any threshold (confidence) value between 0.4 to almost 0.5 gives better results from the model
 
 #### Confusion Matrix
 - YOLO Small 
@@ -152,7 +156,7 @@ Let's visualize some of our `training image batch` and `validation image batch`
 
 ![alt text](https://github.com/sudheeshe/Turbine_Detection_YOLO_SAHI/blob/main/readme_imgs/pred_3.jpg?raw=true)
 
-- Prediction with SAHI YOLO Small and YOLOX with different slicing sizes
+- Prediction with `SAHI+YOLO Small` and `SAHI+YOLOX` with different slicing sizes
 
 - Let's see the prediction on a `small Image (size 600x450)` with `SAHI+YOLO Small and SAHI+YOLOX`
 
