@@ -6,6 +6,9 @@
 ### Why Oject Detection is difficult in small objects ...??
 
 - Normally datasets which generally consist of low-resolution photos (640 x 480 pixels) with huge objects and high pixel coverage (on average, 60 percent of the image height). 
+
+- ![alt text](https://github.com/sudheeshe/Turbine_Detection_YOLO_SAHI/blob/main/readme_imgs/19.jpg?raw=true)
+
 - While the trained models perform well on those sorts of input data, they exhibit much poorer accuracy on small item detection tasks in high-resolution photos captured by high-end drones and surveillance cameras.
 - Small object detection is thus a difficult task in computer vision because, in addition to the small representations of objects, the diversity of input images makes the task more difficult. 
 - For example, an image can have different resolutions; if the resolution is low, the detector may have difficulty detecting small objects.
