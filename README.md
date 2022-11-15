@@ -141,7 +141,9 @@ Let's visualize some of our `training image batch` and `validation image batch`
 
 - Let's see some prediction done by the model through UI
 
-![alt text](https://github.com/sudheeshe/PCB_Defect_Detection_Training/blob/main/imgs_readme/pred_collage.jpg?raw=true)
+- Prediction with standerd YOLO Small and YOLOX
+
+![alt text](https://github.com/sudheeshe/Turbine_Detection_YOLO_SAHI/blob/main/readme_imgs/pred_1.jpg?raw=true)
 
 
 ## Video Demo
