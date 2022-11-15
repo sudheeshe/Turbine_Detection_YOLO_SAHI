@@ -1,0 +1,50 @@
+<!doctype html>
+<title>Python Flask File Upload Example</title>
+<h1>Wind Turbine Detection</h1>
+
+<h2>Upload an Image</h2>
+
+{% if filename %}
+	<div>
+		<img src="{{ url_for('static', filename='/Images/exp/visuals/'+filename) }}">
+	</div>
+{% endif %}
+
+
+<form method="post" action="/" enctype="multipart/form-data">
+		<p>
+			<input type="file" name="file" autocomplete="off" required>
+		</p>
+    <h3>Select a Yolo model</h3>
+
+        <tr>
+            <td><b>Model : </b></td>
+            <td>
+               <select name = 'model' id="model">
+                  <option value="yolo_small">YOLO Small</option>
+                  <option value='yolo_x'>YOLOX</option>
+                  <option value='yolo_small_sahi'>YOLO Small with SAHI</option>
+                  <option value='yolo_x_sahi'>YOLOX with SAHI</option>
+               </select>
+            </td>
+        </tr> <br>
+         <br>
+
+
+        <tr>
+            <td><b>Applicable to SAHI Models : </b></td>
+            <td>
+               <select name = 'size' id="size">
+                   <option value='512'>None</option>
+                  <option value="64">Image Size 64x64</option>
+                  <option value='128'>Image Size 128x128</option>
+                  <option value='256'>Image Size 256x256</option>
+                  <option value='512'>Image Size 512x512</option>
+               </select>
+            </td>
+        </tr>
+
+    <p>
+		<input type="submit" value="Submit">
+	</p>
+</form>
