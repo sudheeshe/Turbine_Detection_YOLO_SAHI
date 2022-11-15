@@ -5,14 +5,14 @@
 
 ### Why Oject Detection is difficult in small objects ...??
 
-- These datasets generally consist of low-resolution photos (640 480 pixels) with huge objects and high pixel coverage (on average, 60 percent of the image height). 
+- Normally datasets which generally consist of low-resolution photos (640 x 480 pixels) with huge objects and high pixel coverage (on average, 60 percent of the image height). 
 - While the trained models perform well on those sorts of input data, they exhibit much poorer accuracy on small item detection tasks in high-resolution photos captured by high-end drones and surveillance cameras.
 - Small object detection is thus a difficult task in computer vision because, in addition to the small representations of objects, the diversity of input images makes the task more difficult. 
 - For example, an image can have different resolutions; if the resolution is low, the detector may have difficulty detecting small objects.
 
+![alt text](https://github.com/sudheeshe/Turbine_Detection_YOLO_SAHI/blob/main/readme_imgs/18.png?raw=true)
 
-- Compared to traditional wired circuits, PCBs offer a number of advantages. Their small and lightweight design is appropriate for use in many modern devices, while their reliability and ease of maintenance suit them for integration in complex systems. 
-- Additionally, their low cost of production makes them a highly cost-effective option.
+
 
 ## Business Scenario
 
@@ -171,3 +171,10 @@ Let's visualize some of our `training image batch` and `validation image batch`
 
 #### YoloV5 custom training helper repo
 [click here](https://github.com/sudheeshe/YoloV5_Custom_training_template)
+
+#### Blogs
+- https://medium.com/codable/sahi-a-vision-library-for-performing-sliced-inference-on-large-images-small-objects-c8b086af3b80
+- https://github.com/obss/sahi
+- https://analyticsindiamag.com/small-object-detection-by-slicing-aided-hyper-inference-sahi/
+- https://soorajsknair.medium.com/an-overview-of-small-object-detection-by-slicing-aided-hyper-inference-sahi-3eed8791c21
+- https://www.kaggle.com/code/remekkinas/sahi-slicing-aided-hyper-inference-yv5-and-yx/notebook
