@@ -141,9 +141,23 @@ Let's visualize some of our `training image batch` and `validation image batch`
 
 - Let's see some prediction done by the model through UI
 
-- Prediction with standerd YOLO Small and YOLOX
+- Let's see the prediction on a `small Image (size 600x450)` with `standard YOLO Small and YOLOX`  
 
 ![alt text](https://github.com/sudheeshe/Turbine_Detection_YOLO_SAHI/blob/main/readme_imgs/pred_1.jpg?raw=true)
+
+- Let's see the prediction on a `large Image (size 1560x1038)` with `standard YOLO Small and YOLOX`
+
+![alt text](https://github.com/sudheeshe/Turbine_Detection_YOLO_SAHI/blob/main/readme_imgs/pred_3.jpg?raw=true)
+
+- Prediction with SAHI YOLO Small and YOLOX with different slicing sizes
+
+- Let's see the prediction on a `small Image (size 600x450)` with `SAHI+YOLO Small and SAHI+YOLOX`
+
+![alt text](https://github.com/sudheeshe/Turbine_Detection_YOLO_SAHI/blob/main/readme_imgs/pred_2.jpg?raw=true)
+
+- Let's see the prediction on a `large Image (size 1560x1038)` with `SAHI+YOLO Small and SAHI+YOLOX`
+
+![alt text](https://github.com/sudheeshe/Turbine_Detection_YOLO_SAHI/blob/main/readme_imgs/pred_4.jpg?raw=true)
 
 
 ## Video Demo
