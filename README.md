@@ -166,6 +166,9 @@ Let's visualize some of our `training image batch` and `validation image batch`
 
 ![alt text](https://github.com/sudheeshe/Turbine_Detection_YOLO_SAHI/blob/main/readme_imgs/pred_4.jpg?raw=true)
 
+### Note: 
+- If the input image size is small the slicing size should keep to smaller values eg: 64x64
+- If the input image size is large the slicing size should keep to larger values eg: 512x512
 
 ## Video Demo
 
