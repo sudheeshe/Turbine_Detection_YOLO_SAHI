@@ -169,7 +169,7 @@ Let's visualize some of our `training image batch` and `validation image batch`
 
 ## Video Demo
 
-[click here](https://www.youtube.com/watch?v=oRXxbZ7rxrI&ab_channel=SudheeshE)
+[click here](https://youtu.be/MTM80cvyMUA)
 
 
 ## References:
